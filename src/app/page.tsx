@@ -1,3 +1,4 @@
+// Copy revised by Claude Code — review before deploy
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { CodeBlock } from "@/components/ui/code-block";
@@ -69,14 +70,14 @@ export default function HomePage() {
               </span>
             </h1>
             <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-base-300">
-              Credentials, encryption, encrypted search, authorization,
-              certificates, secrets, notifications, and audit. Nine engines, one
-              binary, one config file. Replace the entire stack.
+              Replace seven security vendors with one binary. Credentials,
+              encryption, search, authorization, certificates, secrets,
+              notifications, and audit — wired together, ready to ship.
             </p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
               <Button asChild size="lg">
                 <Link href="https://app.shroudb.io/signup">
-                  Get started free
+                  Start for free
                 </Link>
               </Button>
               <Button asChild size="lg" variant="secondary">
@@ -96,11 +97,11 @@ export default function HomePage() {
         <div className="mx-auto max-w-6xl px-6">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="display text-3xl text-base-cream md:text-4xl">
-              What you&apos;re stitching together today
+              Delete a row from your invoices.
             </h2>
             <p className="mt-4 text-base text-base-500">
-              Seven vendors. Seven auth models. Seven config formats. Seven
-              billing pages. Seven failure modes.
+              One vendor instead of seven. One auth model. One config. One
+              place to debug when something breaks at 2am.
             </p>
           </div>
 
@@ -137,11 +138,11 @@ export default function HomePage() {
         <div className="mx-auto max-w-6xl px-6">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="display text-3xl text-base-cream md:text-4xl">
-              Nine engines, one storage layer
+              Pick the engine. Skip the integration work.
             </h2>
             <p className="mt-4 text-base text-base-500">
-              Each engine does one thing well. All share one auth model, one
-              config format, one telemetry pipeline.
+              Nine focused engines that already speak the same auth, config,
+              and telemetry. Compose them like libraries — without the glue.
             </p>
           </div>
 
@@ -158,11 +159,11 @@ export default function HomePage() {
         <div className="mx-auto max-w-6xl px-6">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="display text-3xl text-base-cream md:text-4xl">
-              Two paths, same engines
+              Host it yourself. Or don&apos;t.
             </h2>
             <p className="mt-4 text-base text-base-500">
-              Run it yourself or let us run it for you. The engines are
-              identical.
+              Same engines, same API, same SDKs. Switch between Cloud and Moat
+              by changing one URL.
             </p>
           </div>
 
@@ -171,20 +172,20 @@ export default function HomePage() {
               kind="cloud"
               title="ShrouDB Cloud"
               tagline="Managed platform"
-              description="Generous free tier, no infrastructure to manage. The same engines, hosted. Your three projects shouldn't need three Railway deployments."
+              description="Skip the deploy. Get every engine running behind a URL in under a minute, with a free tier that comfortably covers side projects."
               bullets={[
                 "Free tier: 10k ops/mo, all engines",
                 "Instant provisioning, zero config",
                 "Managed upgrades, backups, TLS",
                 "SLA and audit exports on Pro",
               ]}
-              cta={{ href: "https://app.shroudb.io/signup", label: "Start free" }}
+              cta={{ href: "https://app.shroudb.io/signup", label: "Start for free" }}
             />
             <DeployCard
               kind="moat"
               title="ShrouDB Moat"
               tagline="Self-hosted gateway"
-              description="Single binary, single port. Compiles all engine cores into one process. One config, one Docker image, zero inter-service hops."
+              description="Keep your data on your infrastructure. One binary, one port, one config — every engine bundled, no service mesh required."
               bullets={[
                 "Single binary, single port",
                 "One config file, all nine engines",
@@ -202,17 +203,18 @@ export default function HomePage() {
         <div className="mx-auto max-w-6xl px-6">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="display text-3xl text-base-cream md:text-4xl">
-              Built for the terminal and the editor
+              Feels right in your terminal and your editor.
             </h2>
             <p className="mt-4 text-base text-base-500">
-              Predictable commands. First-class SDKs. Observability in the box.
+              Predictable commands, typed SDKs, telemetry that&apos;s already
+              wired up. The boring parts are done.
             </p>
           </div>
 
           <div className="mt-12 grid gap-4 md:grid-cols-2">
             <DXCard
-              title="Runtime config"
-              description="Change rotation intervals, CORS origins, rate limits without restarts. Every mutation is appended to the WAL."
+              title="Tune it without redeploying"
+              description="Change rotation intervals, CORS origins, and rate limits at runtime. Every mutation is appended to the WAL."
             >
               {`> CONFIG SET sigil.keyspaces.jwt.rotation_days 7
 OK
@@ -221,8 +223,8 @@ jwt.rotation_days = 7 (runtime)
 jwt.default_ttl   = 1h (bootstrap)`}
             </DXCard>
             <DXCard
-              title="One token, all engines"
-              description="Scope-based auth. Grant cipher:encrypt/payments without giving away keep:get/*."
+              title="One token, least privilege everywhere"
+              description="Scope-based auth across every engine. Grant cipher:encrypt/payments without handing over keep:get/*."
             >
               {`[access]
 mode = "token"
@@ -235,8 +237,8 @@ scopes = [
 ]`}
             </DXCard>
             <DXCard
-              title="Telemetry built in"
-              description="Tracing, audit, and OTEL export out of the box. Chronicle ingests everything every engine emits."
+              title="See what every engine is doing"
+              description="Traces, audit logs, and OTEL export ship in the binary. Chronicle ingests every event from every engine, no extra agents."
             >
               {`[telemetry]
 console    = true
@@ -247,8 +249,8 @@ endpoint     = "http://tempo:4317"
 service_name = "shroudb"`}
             </DXCard>
             <DXCard
-              title="SDKs that map to engines"
-              description="Every engine has a typed client in TypeScript, Python, Ruby, and Go. Command names match the protocol."
+              title="SDKs that match the protocol"
+              description="Typed clients for TypeScript, Python, Ruby, and Go. Method names map 1:1 to the engine commands you read in the docs."
             >
               {`import { Cipher } from "@shroudb/sdk";
 
@@ -270,16 +272,16 @@ const ct = await cipher.encrypt({
             <ShrouDBMark size={48} />
           </div>
           <h2 className="display text-3xl text-base-cream md:text-4xl">
-            Security infrastructure that just works.
+            Ship security infrastructure today.
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-base text-base-500">
-            Start on Cloud in a minute. Switch to Moat whenever you need it. The
-            engines are the same.
+            Start on Cloud in a minute. Move to Moat whenever you want — your
+            code doesn&apos;t change.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
             <Button asChild size="lg">
               <Link href="https://app.shroudb.io/signup">
-                Get started free
+                Start for free
               </Link>
             </Button>
             <Button asChild size="lg" variant="secondary">

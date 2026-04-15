@@ -1,3 +1,4 @@
+// Copy revised by Claude Code — review before deploy
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import type { Metadata } from "next";
@@ -131,11 +132,11 @@ export default async function EnginePage({
       {/* In Moat */}
       <section className="mt-12">
         <h2 className="text-xs font-semibold uppercase tracking-widest text-base-500">
-          In Moat
+          Bundle into Moat
         </h2>
         <p className="mt-3 text-sm text-base-300">
-          Enable {engine.name} as part of a unified Moat process. Shares the
-          auth layer, storage, and telemetry with every other engine.
+          Drop {engine.name} into a unified Moat process and it inherits the
+          shared auth layer, storage, and telemetry — no extra wiring.
         </p>
         <div className="mt-4">
           <CodeBlock title="moat.toml">{content.moatSnippet}</CodeBlock>
@@ -146,15 +147,15 @@ export default async function EnginePage({
       <div className="mt-14 flex flex-wrap items-center justify-between gap-4 rounded-2xl border border-base-800 bg-base-dark p-6">
         <div>
           <div className="text-sm font-semibold text-base-cream">
-            Try {engine.name} on ShrouDB Cloud
+            Run {engine.name} in production today
           </div>
           <div className="mt-1 text-sm text-base-500">
-            Free tier — no infrastructure to manage.
+            Free on ShrouDB Cloud up to 10k ops/month — no card required.
           </div>
         </div>
         <div className="flex gap-3">
           <Button asChild>
-            <Link href="https://app.shroudb.io/signup">Get started</Link>
+            <Link href="https://app.shroudb.io/signup">Start for free</Link>
           </Button>
           <Button asChild variant="secondary">
             <Link href={`/docs/${key}`}>Read the docs</Link>

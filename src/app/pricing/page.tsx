@@ -1,3 +1,4 @@
+// Copy revised by Claude Code — review before deploy
 import Link from "next/link";
 import type { Metadata } from "next";
 import { Button } from "@/components/ui/button";
@@ -6,7 +7,7 @@ import { palette } from "@/brand/palette";
 export const metadata: Metadata = {
   title: "Pricing",
   description:
-    "ShrouDB Cloud pricing. Free tier, usage-based Pro, and Enterprise for regulated environments.",
+    "Start free. Pay per operation when you grow. Self-host for free if you'd rather run the ops yourself.",
 };
 
 type Row = {
@@ -33,11 +34,11 @@ export default function PricingPage() {
     <div className="mx-auto max-w-6xl px-6 py-16">
       <header className="mx-auto max-w-2xl text-center">
         <h1 className="display text-4xl text-base-cream md:text-5xl">
-          Pricing
+          Pay for what you use, nothing else.
         </h1>
         <p className="mt-4 text-base text-base-500">
-          Start free. Pay per operation when you grow. Self-host Moat if you
-          need to — the code you write doesn&apos;t change.
+          Start free. Move to per-operation pricing when you grow. Self-host
+          Moat any time — your code stays the same.
         </p>
       </header>
 
@@ -89,7 +90,7 @@ export default function PricingPage() {
               <td className="px-4 py-5"></td>
               <td className="px-4 py-5">
                 <Button asChild variant="secondary" className="w-full">
-                  <Link href="https://app.shroudb.io/signup">Start free</Link>
+                  <Link href="https://app.shroudb.io/signup">Start for free</Link>
                 </Button>
               </td>
               <td
@@ -111,14 +112,14 @@ export default function PricingPage() {
       </div>
 
       <p className="mt-8 text-center text-sm text-base-500">
-        Prefer to self-host?{" "}
+        Want to keep your data on your hardware?{" "}
         <Link
           href="/moat"
           className="text-brand-core-light underline-offset-4 hover:underline"
         >
-          Run ShrouDB Moat
+          Self-host Moat
         </Link>{" "}
-        for the exact same engines — no per-op pricing, bring your own ops.
+        — same engines, no per-op pricing, you bring the ops.
       </p>
     </div>
   );

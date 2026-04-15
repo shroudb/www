@@ -1,3 +1,4 @@
+// Copy revised by Claude Code — review before deploy
 import Link from "next/link";
 import { ShrouDBMark } from "@/brand/marks";
 import { Wordmark } from "./wordmark";
@@ -42,8 +43,8 @@ export function SiteFooter() {
               <Wordmark className="text-lg" />
             </Link>
             <p className="mt-3 max-w-xs text-sm text-base-500">
-              Security infrastructure for developers who ship. Nine engines, one
-              binary.
+              Nine security engines, one binary. Built for developers who&apos;d
+              rather ship than integrate.
             </p>
           </div>
 
@@ -88,8 +89,7 @@ export function SiteFooter() {
 
         <div className="mt-8 flex flex-col items-start justify-between gap-2 border-t border-base-800 pt-6 text-xs text-base-700 sm:flex-row sm:items-center">
           <span>
-            © {new Date().getFullYear()} ShrouDB. Security infrastructure for
-            developers who ship.
+            © {new Date().getFullYear()} ShrouDB. A Skeptik Labs product.
           </span>
           <span className="font-mono">shroudb.io · shroudb.dev</span>
         </div>

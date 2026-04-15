@@ -1,3 +1,4 @@
+// Copy revised by Claude Code — review before deploy
 import Link from "next/link";
 import type { Metadata } from "next";
 import { Button } from "@/components/ui/button";
@@ -8,7 +9,7 @@ import { palette } from "@/brand/palette";
 export const metadata: Metadata = {
   title: "Moat",
   description:
-    "Self-hosted ShrouDB. Single binary, single port, all nine engines.",
+    "Run every ShrouDB engine on your own infrastructure. One binary, one port, one config file.",
 };
 
 const QUICKSTART = `$ docker run --rm -it \\
@@ -39,6 +40,8 @@ export default function MoatPage() {
             <MoatMark size={56} />
           </div>
           <h1 className="display text-5xl text-base-cream md:text-6xl">
+            Your security stack,
+            <br />
             <span
               style={{
                 background: `linear-gradient(135deg, ${palette.brand.moat}, ${palette.brand.moatLight})`,
@@ -46,12 +49,13 @@ export default function MoatPage() {
                 WebkitTextFillColor: "transparent",
               }}
             >
-              ShrouDB Moat
+              in one process.
             </span>
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg text-base-300">
-            Self-hosted. Single binary, single port. Every engine in one
-            process. One config file. Zero inter-service hops.
+            Keep your data on your hardware. Moat bundles every ShrouDB engine
+            into a single binary — no sidecars, no service mesh, nothing
+            crossing the network just to encrypt a string.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
             <Button asChild size="lg">
@@ -68,10 +72,11 @@ export default function MoatPage() {
       <section className="border-t border-base-800 py-16">
         <div className="mx-auto max-w-4xl px-6">
           <h2 className="display text-3xl text-base-cream">
-            One container. All nine engines.
+            From zero to running in one command.
           </h2>
           <p className="mt-3 text-base text-base-300">
-            Point Moat at a master key and a config file. It&apos;s running.
+            Point Moat at a master key and a config file. That&apos;s the whole
+            install.
           </p>
           <div className="mt-6">
             <CodeBlock title="terminal">{QUICKSTART}</CodeBlock>
@@ -84,28 +89,28 @@ export default function MoatPage() {
         <div className="mx-auto max-w-5xl px-6">
           <div className="grid gap-4 md:grid-cols-2">
             <Prop
-              title="Single binary, single port"
-              description="Every engine core compiled into one process. No sidecars, no mesh, no service discovery."
+              title="Run it as one process"
+              description="Every engine core compiled into a single binary. No sidecars to deploy, no mesh to configure, no service discovery to wire up."
             />
             <Prop
-              title="Dual protocol"
-              description="HTTP on :8200, TCP on :8201. Same commands, same auth. Use whichever fits the call site."
+              title="Hit it however you want"
+              description="HTTP on :8200, TCP on :8201. Same commands, same auth — pick whichever protocol suits the call site."
             />
             <Prop
-              title="One config file"
-              description="moat.toml wires every engine, storage, auth, telemetry. No per-engine config files to coordinate."
+              title="One config to rule them all"
+              description="moat.toml wires every engine, storage backend, auth policy, and telemetry sink. Nothing to coordinate across files."
             />
             <Prop
-              title="Encrypted WAL"
-              description="Every mutation AES-256-GCM encrypted before hitting disk. Per-engine HKDF derivation from a single master key."
+              title="Encrypted on disk by default"
+              description="Every mutation is AES-256-GCM encrypted before it touches storage. Per-engine HKDF derivation from a single master key — you manage one secret."
             />
             <Prop
-              title="Runtime CONFIG"
-              description="Change TTLs, rotation, CORS, rate limits without restarts. Every mutation persists to the WAL."
+              title="Reconfigure without restarts"
+              description="Change TTLs, rotation cadence, CORS, and rate limits at runtime. Every mutation persists to the encrypted WAL."
             />
             <Prop
-              title="Scope-based auth"
-              description="One token model across every engine. cipher:encrypt/payments without keep:get/* — least privilege by default."
+              title="Least privilege out of the box"
+              description="One token model across every engine. Grant cipher:encrypt/payments without exposing keep:get/*."
             />
           </div>
         </div>
@@ -115,15 +120,15 @@ export default function MoatPage() {
       <section className="border-t border-base-800 py-20">
         <div className="mx-auto max-w-3xl px-6 text-center">
           <h2 className="display text-3xl text-base-cream">
-            Prefer not to run it?
+            Don&apos;t want to run it yourself?
           </h2>
           <p className="mx-auto mt-3 max-w-xl text-base text-base-500">
-            ShrouDB Cloud runs the identical engines on our infrastructure,
-            with a free tier.
+            ShrouDB Cloud runs the identical engines for you, free up to 10k
+            ops/month.
           </p>
           <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
             <Button asChild size="lg">
-              <Link href="/cloud">See ShrouDB Cloud</Link>
+              <Link href="/cloud">Try ShrouDB Cloud</Link>
             </Button>
             <Button asChild size="lg" variant="secondary">
               <Link href="https://github.com/shroudb/moat">Moat on GitHub</Link>

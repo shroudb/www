@@ -1,3 +1,4 @@
+// Copy revised by Claude Code — review before deploy
 import type { Metadata } from "next";
 import { DM_Sans, JetBrains_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
@@ -25,21 +26,21 @@ export const metadata: Metadata = {
     template: "%s · ShrouDB",
   },
   description:
-    "Nine engines, one binary. Credential storage, encryption, encrypted search, authorization, certificates, secrets, notifications, and audit — unified in ShrouDB Moat or managed via ShrouDB Cloud.",
+    "Replace seven security vendors with one binary. Credentials, encryption, search, authz, certificates, secrets, notifications, and audit — wired up and ready to ship.",
   metadataBase: new URL("https://shroudb.io"),
   openGraph: {
     type: "website",
     url: "https://shroudb.io",
     title: "ShrouDB — Security infrastructure that just works",
     description:
-      "Nine engines, one binary. Credentials, encryption, encrypted search, authorization, certificates, secrets, notifications, and audit — unified.",
+      "Replace seven security vendors with one binary. Nine engines, one auth model, one config — wired up and ready to ship.",
     siteName: "ShrouDB",
   },
   twitter: {
     card: "summary_large_image",
     title: "ShrouDB — Security infrastructure that just works",
     description:
-      "Nine engines, one binary. Credentials, encryption, encrypted search, authorization, certificates, secrets, notifications, and audit — unified.",
+      "Replace seven security vendors with one binary. Nine engines, one auth model, one config — wired up and ready to ship.",
   },
 };
 

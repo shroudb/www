@@ -1,3 +1,4 @@
+// Copy revised by Claude Code — review before deploy
 import Link from "next/link";
 import type { Metadata } from "next";
 import { Button } from "@/components/ui/button";
@@ -5,7 +6,7 @@ import { ShrouDBMark } from "@/brand/marks";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: "Talk to the ShrouDB team — sales, security, support.",
+  description: "Reach the right inbox: sales, security, support, or general.",
 };
 
 export default function ContactPage() {
@@ -14,35 +15,35 @@ export default function ContactPage() {
       <div className="text-center">
         <ShrouDBMark size={48} />
         <h1 className="display mt-6 text-4xl text-base-cream md:text-5xl">
-          Talk to us
+          Get a real human, fast.
         </h1>
         <p className="mt-3 text-base text-base-500">
-          Procurement, security review, or just a question about the engines.
+          Pick the inbox that fits — we read all of them.
         </p>
       </div>
 
       <div className="mt-12 grid gap-4 sm:grid-cols-2">
         <Card
           title="Sales & Enterprise"
-          description="Pricing, DPA, dedicated tenancy, BYO KMS."
+          description="Custom pricing, DPAs, dedicated tenancy, BYO KMS."
           href="mailto:sales@shroudb.io"
           cta="sales@shroudb.io"
         />
         <Card
           title="Security"
-          description="Coordinated disclosure. PGP key on request."
+          description="Report a vulnerability — coordinated disclosure, PGP key on request."
           href="mailto:security@shroudb.io"
           cta="security@shroudb.io"
         />
         <Card
           title="Support"
-          description="Cloud users — reachable in-app. Open source — GitHub issues."
+          description="Cloud users get in-app chat. Open source lives on GitHub issues."
           href="https://github.com/shroudb"
           cta="GitHub"
         />
         <Card
           title="General"
-          description="Anything else."
+          description="Everything else."
           href="mailto:hello@shroudb.io"
           cta="hello@shroudb.io"
         />

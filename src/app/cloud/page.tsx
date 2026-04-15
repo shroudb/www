@@ -1,3 +1,4 @@
+// Copy revised by Claude Code — review before deploy
 import Link from "next/link";
 import type { Metadata } from "next";
 import { Button } from "@/components/ui/button";
@@ -8,7 +9,7 @@ import { palette } from "@/brand/palette";
 export const metadata: Metadata = {
   title: "Cloud",
   description:
-    "Managed ShrouDB. Every engine hosted. Free tier, zero infrastructure.",
+    "Run every ShrouDB engine without running anything. Free tier, usage-based pricing, zero ops.",
 };
 
 export default function CloudPage() {
@@ -28,6 +29,8 @@ export default function CloudPage() {
             <CloudMark size={56} />
           </div>
           <h1 className="display text-5xl text-base-cream md:text-6xl">
+            Skip the deploy.
+            <br />
             <span
               style={{
                 background: `linear-gradient(135deg, ${palette.brand.cloud}, ${palette.brand.cloudLight})`,
@@ -35,16 +38,16 @@ export default function CloudPage() {
                 WebkitTextFillColor: "transparent",
               }}
             >
-              ShrouDB Cloud
+              Keep the engines.
             </span>
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg text-base-300">
-            Every engine, hosted. Your three side projects shouldn&apos;t need
-            three Railway deployments.
+            Every ShrouDB engine, hosted on a URL. Generous free tier, pay only
+            for what you use, no infrastructure to babysit.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
             <Button asChild size="lg">
-              <Link href="https://app.shroudb.io/signup">Start free</Link>
+              <Link href="https://app.shroudb.io/signup">Start for free</Link>
             </Button>
             <Button asChild size="lg" variant="secondary">
               <Link href="/pricing">See pricing</Link>
@@ -60,19 +63,19 @@ export default function CloudPage() {
             <Plan
               name="Free"
               price="$0"
-              tagline="For side projects and exploration"
+              tagline="Ship a side project this weekend"
               bullets={[
                 "10,000 operations / month",
                 "All nine engines",
                 "7-day audit retention",
                 "Community support",
               ]}
-              cta={{ href: "https://app.shroudb.io/signup", label: "Start free" }}
+              cta={{ href: "https://app.shroudb.io/signup", label: "Start for free" }}
             />
             <Plan
               name="Pro"
               price="Usage-based"
-              tagline="For production workloads"
+              tagline="Pay for what you actually use"
               bullets={[
                 "Per-operation pricing, no per-seat",
                 "90-day audit retention, exportable",
@@ -85,7 +88,7 @@ export default function CloudPage() {
             <Plan
               name="Enterprise"
               price="Contact us"
-              tagline="For regulated environments"
+              tagline="Pass your security review"
               bullets={[
                 "Dedicated tenancy, VPC peering",
                 "BYO KMS for master-key wrapping",
@@ -101,11 +104,12 @@ export default function CloudPage() {
       {/* Same API */}
       <section className="border-t border-base-800 py-16">
         <div className="mx-auto max-w-4xl px-6">
-          <h2 className="display text-3xl text-base-cream">Same API as Moat</h2>
+          <h2 className="display text-3xl text-base-cream">
+            Migrate by changing one line.
+          </h2>
           <p className="mt-3 text-base text-base-300">
-            Cloud exposes the identical HTTP API. Swap the base URL and the
-            token — your SDK code doesn&apos;t change when you move between
-            Cloud and Moat.
+            Cloud and Moat speak the identical HTTP API. Swap the base URL and
+            the token — your SDK code stays exactly the same.
           </p>
           <div className="mt-6">
             <CodeBlock title="typescript">
