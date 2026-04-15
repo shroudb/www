@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <path d="M50 8L85 28V68L50 88L15 68V28L50 8Z" fill="#C75B39" opacity="0.2"/>
+  <path d="M50 16L78 33V63L50 80L22 63V33L50 16Z" fill="#C75B39" opacity="0.4"/>
+  <path d="M50 24L71 38V58L50 72L29 58V38L50 24Z" fill="#C75B39"/>
+  <path d="M50 34L60 41V55L50 62L40 55V41L50 34Z" fill="#1C1917" opacity="0.7"/>
+  <path d="M50 24L71 38L50 48L29 38L50 24Z" fill="#E8825F" opacity="0.3"/>
+</svg>
