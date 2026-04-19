@@ -1,4 +1,3 @@
-// Copy revised by Claude Code — review before deploy
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import type { Metadata } from "next";
@@ -154,12 +153,8 @@ export default async function EnginePage({
           </div>
         </div>
         <div className="flex gap-3">
-          <Button asChild>
-            <Link href="https://app.shroudb.io/signup">Start for free</Link>
-          </Button>
-          <Button asChild variant="secondary">
-            <Link href={`/docs/${key}`}>Read the docs</Link>
-          </Button>
+          <Button render={<Link href="https://app.shroudb.io/signup" />}>Start for free          </Button>
+          <Button variant="secondary" render={<Link href={`/docs/${key}`} />}>Read the docs          </Button>
         </div>
       </div>
     </article>

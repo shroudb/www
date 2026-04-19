@@ -1,4 +1,3 @@
-// Copy revised by Claude Code — review before deploy
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { CodeBlock } from "@/components/ui/code-block";
@@ -75,14 +74,10 @@ export default function HomePage() {
               notifications, and audit — wired together, ready to ship.
             </p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-              <Button asChild size="lg">
-                <Link href="https://app.shroudb.io/signup">
+              <Button size="lg" render={<Link href="https://app.shroudb.io/signup" />}>
                   Start for free
-                </Link>
-              </Button>
-              <Button asChild size="lg" variant="secondary">
-                <Link href="/moat">Self-host Moat</Link>
-              </Button>
+                              </Button>
+              <Button size="lg" variant="secondary" render={<Link href="/moat" />}>Self-host Moat              </Button>
             </div>
           </div>
 
@@ -279,14 +274,10 @@ const ct = await cipher.encrypt({
             code doesn&apos;t change.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-            <Button asChild size="lg">
-              <Link href="https://app.shroudb.io/signup">
+            <Button size="lg" render={<Link href="https://app.shroudb.io/signup" />}>
                 Start for free
-              </Link>
-            </Button>
-            <Button asChild size="lg" variant="secondary">
-              <Link href="/docs">Read the docs</Link>
-            </Button>
+                          </Button>
+            <Button size="lg" variant="secondary" render={<Link href="/docs" />}>Read the docs            </Button>
           </div>
         </div>
       </section>
@@ -350,9 +341,7 @@ function DeployCard({
         ))}
       </ul>
       <div className="mt-6">
-        <Button asChild variant="secondary">
-          <Link href={cta.href}>{cta.label}</Link>
-        </Button>
+        <Button variant="secondary" render={<Link href={cta.href} />}>{cta.label}        </Button>
       </div>
     </div>
   );

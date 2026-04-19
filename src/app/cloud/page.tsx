@@ -1,4 +1,3 @@
-// Copy revised by Claude Code — review before deploy
 import Link from "next/link";
 import type { Metadata } from "next";
 import { Button } from "@/components/ui/button";
@@ -46,12 +45,8 @@ export default function CloudPage() {
             for what you use, no infrastructure to babysit.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-            <Button asChild size="lg">
-              <Link href="https://app.shroudb.io/signup">Start for free</Link>
-            </Button>
-            <Button asChild size="lg" variant="secondary">
-              <Link href="/pricing">See pricing</Link>
-            </Button>
+            <Button size="lg" render={<Link href="https://app.shroudb.io/signup" />}>Start for free            </Button>
+            <Button size="lg" variant="secondary" render={<Link href="/pricing" />}>See pricing            </Button>
           </div>
         </div>
       </section>
@@ -200,12 +195,10 @@ function Plan({
       </ul>
       <div className="mt-6">
         <Button
-          asChild
-          variant={featured ? "primary" : "secondary"}
+         
+          variant={featured ? "default" : "secondary"}
           className="w-full"
-        >
-          <Link href={cta.href}>{cta.label}</Link>
-        </Button>
+         render={<Link href={cta.href} />}>{cta.label}        </Button>
       </div>
     </div>
   );

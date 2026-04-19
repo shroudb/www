@@ -1,4 +1,3 @@
-// Copy revised by Claude Code — review before deploy
 import Link from "next/link";
 import type { Metadata } from "next";
 import { Button } from "@/components/ui/button";
@@ -50,9 +49,7 @@ export default function ContactPage() {
       </div>
 
       <div className="mt-12 flex justify-center">
-        <Button asChild variant="secondary">
-          <Link href="/">Back to home</Link>
-        </Button>
+        <Button variant="secondary" render={<Link href="/" />}>Back to home        </Button>
       </div>
     </div>
   );

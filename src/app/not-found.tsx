@@ -1,4 +1,3 @@
-// Copy revised by Claude Code — review before deploy
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ShrouDBMark } from "@/brand/marks";
@@ -15,12 +14,8 @@ export default function NotFound() {
         wanted.
       </p>
       <div className="mt-8 flex flex-wrap justify-center gap-3">
-        <Button asChild>
-          <Link href="/docs">Read the docs</Link>
-        </Button>
-        <Button asChild variant="secondary">
-          <Link href="/engines">Browse engines</Link>
-        </Button>
+        <Button render={<Link href="/docs" />}>Read the docs        </Button>
+        <Button variant="secondary" render={<Link href="/engines" />}>Browse engines        </Button>
       </div>
     </div>
   );

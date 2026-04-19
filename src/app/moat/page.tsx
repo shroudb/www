@@ -1,4 +1,3 @@
-// Copy revised by Claude Code — review before deploy
 import Link from "next/link";
 import type { Metadata } from "next";
 import { Button } from "@/components/ui/button";
@@ -58,12 +57,8 @@ export default function MoatPage() {
             crossing the network just to encrypt a string.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-            <Button asChild size="lg">
-              <Link href="/docs/install">Install Moat</Link>
-            </Button>
-            <Button asChild size="lg" variant="secondary">
-              <Link href="/docs/architecture">Read the architecture</Link>
-            </Button>
+            <Button size="lg" render={<Link href="/docs/install" />}>Install Moat            </Button>
+            <Button size="lg" variant="secondary" render={<Link href="/docs/architecture" />}>Read the architecture            </Button>
           </div>
         </div>
       </section>
@@ -127,12 +122,8 @@ export default function MoatPage() {
             ops/month.
           </p>
           <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
-            <Button asChild size="lg">
-              <Link href="/cloud">Try ShrouDB Cloud</Link>
-            </Button>
-            <Button asChild size="lg" variant="secondary">
-              <Link href="https://github.com/shroudb/moat">Moat on GitHub</Link>
-            </Button>
+            <Button size="lg" render={<Link href="/cloud" />}>Try ShrouDB Cloud            </Button>
+            <Button size="lg" variant="secondary" render={<Link href="https://github.com/shroudb/moat" />}>Moat on GitHub            </Button>
           </div>
         </div>
       </section>

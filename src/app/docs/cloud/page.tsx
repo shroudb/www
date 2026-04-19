@@ -53,12 +53,8 @@ export default function CloudDocsPage() {
       </Callout>
 
       <div className="mt-8 flex gap-3">
-        <Button asChild>
-          <Link href="https://app.shroudb.io/signup">Start free</Link>
-        </Button>
-        <Button asChild variant="secondary">
-          <Link href="/pricing">See pricing</Link>
-        </Button>
+        <Button render={<Link href="https://app.shroudb.io/signup" />}>Start free        </Button>
+        <Button variant="secondary" render={<Link href="/pricing" />}>See pricing        </Button>
       </div>
     </>
   );

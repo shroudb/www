@@ -1,4 +1,3 @@
-// Copy revised by Claude Code — review before deploy
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { EngineCard } from "@/components/engine-card";
@@ -30,9 +29,7 @@ export default function EnginesIndex() {
         ))}
       </div>
       <div className="mt-14 flex justify-center">
-        <Button asChild size="lg">
-          <Link href="https://app.shroudb.io/signup">Start for free</Link>
-        </Button>
+        <Button size="lg" render={<Link href="https://app.shroudb.io/signup" />}>Start for free        </Button>
       </div>
     </div>
   );

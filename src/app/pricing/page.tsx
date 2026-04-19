@@ -1,4 +1,3 @@
-// Copy revised by Claude Code — review before deploy
 import Link from "next/link";
 import type { Metadata } from "next";
 import { Button } from "@/components/ui/button";
@@ -89,22 +88,16 @@ export default function PricingPage() {
             <tr className="border-t border-base-800">
               <td className="px-4 py-5"></td>
               <td className="px-4 py-5">
-                <Button asChild variant="secondary" className="w-full">
-                  <Link href="https://app.shroudb.io/signup">Start for free</Link>
-                </Button>
+                <Button variant="secondary" className="w-full" render={<Link href="https://app.shroudb.io/signup" />}>Start for free                </Button>
               </td>
               <td
                 className="px-4 py-5"
                 style={{ background: `${palette.brand.cloud}10` }}
               >
-                <Button asChild className="w-full">
-                  <Link href="https://app.shroudb.io/signup">Start Pro</Link>
-                </Button>
+                <Button className="w-full" render={<Link href="https://app.shroudb.io/signup" />}>Start Pro                </Button>
               </td>
               <td className="px-4 py-5">
-                <Button asChild variant="secondary" className="w-full">
-                  <Link href="/contact">Talk to us</Link>
-                </Button>
+                <Button variant="secondary" className="w-full" render={<Link href="/contact" />}>Talk to us                </Button>
               </td>
             </tr>
           </tbody>
